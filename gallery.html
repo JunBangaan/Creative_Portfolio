@@ -1,0 +1,190 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Banga-an's Creatives - Gallery</title> 
+    <style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        } 
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #dce9e4; 
+            color: #020202; 
+            height: 100vh;          /* Changed from min-height to fix screen height */
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden;       /* Prevents the main page body from scrolling down */
+        } 
+        header { 
+            background-color: #0b96e7; 
+            color: white; 
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); 
+        } 
+        .top-header { 
+            height: 105px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 18px; 
+            border-bottom: 1px solid #71827e; 
+        } 
+        .logo { 
+            width: 55px; 
+            height: 55px; 
+            border-radius: 50%; 
+            border: 3px solid #b7d8c9; 
+            object-fit: cover; 
+        } 
+        .brand { 
+            font-size: 30px; 
+            font-weight: bold; 
+            letter-spacing: 2px; 
+        } 
+        nav { 
+            height: 65px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        } 
+        nav a { 
+            color: #ffffff; 
+            text-decoration: none; 
+            padding: 23px 45px; 
+            font-size: 17px; 
+            font-weight: bold; 
+        } 
+        nav a:hover, nav a.active { 
+            background-color: #3e514c; 
+        } 
+        main { 
+            flex: 1; 
+            padding: 25px 7%;       /* Slightly reduced padding to maximize layout room */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;       /* Keeps main content bounds strict */
+        } 
+        .portfolio-container { 
+            background-color: #eef5f1; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); 
+            border: 1px solid #71827e; 
+            padding: 30px 40px;     /* Trimmed top/bottom padding to prevent stretching */
+            text-align: center; 
+            max-width: 1000px; 
+            width: 100%;
+            max-height: 100%;       /* Prevents container from stretching past the screen */
+            display: flex;
+            flex-direction: column;
+        } 
+        .portfolio-container h1 { 
+            font-size: 34px; 
+            color: #000000; 
+            margin-bottom: 10px; 
+        } 
+        .subtitle { 
+            font-size: 16px; 
+            color: #070707; 
+            font-style: italic; 
+            margin-bottom: 25px;    /* Trimmed layout spacing */
+        } 
+        .profiles-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 25px 20px; 
+            justify-items: center; 
+            overflow-y: auto;       /* Safe-scroll zone only inside the container if needed */
+            padding-right: 5px;
+        } 
+        .profile-card { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+        } 
+        .profile-card img { 
+            width: 110px;           /* Slightly optimized sizing to keep layout flat */
+            height: 110px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            border: 4px solid #607d73; 
+            margin-bottom: 12px; 
+            background-color: #ccc; 
+        } 
+        .profile-card span { 
+            font-size: 13px; 
+            font-weight: bold; 
+            color: #344944; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px; 
+        } 
+        footer { 
+            background-color: #283936; 
+            color: white; 
+            text-align: center; 
+            padding: 22px; 
+            font-size: 14px; 
+        } 
+        @media (max-width: 700px) { 
+            .brand { 
+                font-size: 20px; 
+            } 
+            nav a { 
+                padding: 20px 12px; 
+                font-size: 13px; 
+            } 
+            .portfolio-container { 
+                padding: 20px 15px; 
+            } 
+            .profiles-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+            } 
+            .profile-card img { 
+                width: 90px; 
+                height: 90px; 
+            } 
+        } 
+    </style> 
+</head> 
+<body> 
+    <header> 
+        <div class="top-header"> 
+            <img src="logo.png" class="logo" alt="Logo"> 
+            <div class="brand">Banga-an's CREATIVES</div> 
+        </div> 
+        <nav> 
+            <a href="index.html">HOME</a> 
+            <a href="about.html">ABOUT</a> 
+            <a href="gallery.html" class="active">GALLERY</a> 
+            <a href="contact.html">CONTACT</a> 
+        </nav> 
+    </header> 
+    <main> 
+        <section class="portfolio-container"> 
+            <h1>Creative Portfolio</h1> 
+            <p class="subtitle">A curated look at our latest collections and artistic ventures.</p> 
+            <div class="profiles-grid"> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 01"><span>Project 01</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 02"><span>Project 02</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 03"><span>Project 03</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 04"><span>Project 04</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 05"><span>Project 05</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 06"><span>Project 06</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 07"><span>Project 07</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 08"><span>Project 08</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 09"><span>Project 09</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 10"><span>Project 10</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 11"><span>Project 11</span></div> 
+                <div class="profile-card"><img src="profile.jpg" alt="Project 12"><span>Project 12</span></div> 
+            </div> 
+        </section> 
+    </main> 
+    <footer> 
+        &copy; 2026 Banga-an's Creatives | All Rights Reserved 
+    </footer> 
+</body> 
+</html>
